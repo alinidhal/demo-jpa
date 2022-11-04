@@ -70,8 +70,14 @@ public class ConnexionJpa {
 		tr.commit();
 
 
-		Emprunt emprunt = em.find(Emprunt.class, 2);
-		System.out.println(emprunt);
+		Livre livre = em.find(Livre.class, 2);
+		System.out.println(livre);
+		
+		for (Emprunt emp: livre.getEmprunts()) {
+			System.out.println(emp);
+		}
+		
+			
 		
 	
 	
