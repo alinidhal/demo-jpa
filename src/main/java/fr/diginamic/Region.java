@@ -52,15 +52,28 @@ public class Region {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+	public Date getDateCreation() {
+		return dateCreation;
+	}
+
+	public void setDateCreation(Date dateCreation) {
+		this.dateCreation = dateCreation;
+	}
+
+	public List<Ville> getVilles() {
+		return villes;
+	}
+
+	public void setVilles(List<Ville> villes) {
+		this.villes = villes;
+	}
+
 	@Override
 	public String toString() {
 		return "Region [id=" + id + ", nom=" + nom + "]";
 	}
 
-	public void setDateCreation(Date date) {
-		
-	}
-
+	
 	
 	
 	

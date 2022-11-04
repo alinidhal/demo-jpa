@@ -1,6 +1,5 @@
 package fr.diginamic;
 
-import java.util.Date;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,8 +17,15 @@ public class ConnexionJpa {
 		tr.begin();
 		
 		//Creation d'un livre
-		Livre livre = new Livre();
-		em.persist(livre);
+//		Livre livre = new Livre();
+//		livre.setTitre("Power: Les 48 lois du pouvoir");
+//		livre.setAuteur("Robert Green");
+//		em.persist(livre);
+//		
+//		Livre livre2 = new Livre();
+//		livre2.setTitre("L'art de la guerre");
+//		livre2.setAuteur("Sun Tzu");
+//		em.persist(livre2);
 //
 //		// Création d'une region
 //		Region region = new Region();
@@ -64,8 +70,12 @@ public class ConnexionJpa {
 		tr.commit();
 
 
-		Livre livre2 = em.find(Livre.class, 1);
-		System.out.println(livre2);
+		Emprunt emprunt = em.find(Emprunt.class, 2);
+		System.out.println(emprunt);
+		
+	
+	
+		
 	}
 
 }
