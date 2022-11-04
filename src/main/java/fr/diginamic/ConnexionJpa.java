@@ -66,16 +66,20 @@ public class ConnexionJpa {
 //		em.persist(martinRaissa);
 //
 //		aubagne.getHabitants().add(martinRaissa);
+		
+		// Création d'un new habitant
+		// Création de son adresse
+		Adresse adresse = new Adresse();
+		adresse.setNomCompletAdress("8 Rue de la Rosaire");
+		adresse.setCodePostal(34700);
+		adresse.setVille("Castellenau-le-Lez");
+		
+		Habitant kassimeNidhal = em.find(Habitant.class, 1);
+		
+		// Mise à jour de l'adresse
+		kassimeNidhal.setAdresse(adresse);
 
 		tr.commit();
-
-
-		Livre livre = em.find(Livre.class, 2);
-		System.out.println(livre);
-		
-		for (Emprunt emp: livre.getEmprunts()) {
-			System.out.println(emp);
-		}
 		
 			
 		

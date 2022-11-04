@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,6 +30,8 @@ public class Habitant {
 	@ManyToMany(mappedBy = "habitants")
 	private List<Ville> ville = new ArrayList<Ville>();
 	
+	@Embedded
+	private Adresse adresse;
 	
 	public Habitant () {
 		
@@ -62,6 +65,26 @@ public class Habitant {
 
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
+	}
+
+
+	public List<Ville> getVille() {
+		return ville;
+	}
+
+
+	public void setVille(List<Ville> ville) {
+		this.ville = ville;
+	}
+
+
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
 	}
 	
 	
