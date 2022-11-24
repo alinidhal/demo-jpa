@@ -8,6 +8,9 @@ import javax.persistence.Persistence;
 
 public class ConnexionJpa {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("recensement");
 		EntityManager em = factory.createEntityManager();
